@@ -11,29 +11,29 @@ ofstream gout("sortaret.out");
 /** Classes **************************** */
 
 class Node;
-class Edge;
+class Node;
 
-class Edge {
+class Node {
 private:
     int weight;
     Node *node;
 public:
-    Edge(Node *) : weight(0) {}
-    Edge & operator=(const Edge&) = delete;
-    Edge (const Edge&) = delete;
+    Node(Node *) : weight(0) {}
+    Node & operator=(const Node&) = delete;
+    Node (const Node&) = delete;
 };
 
 class Node {
 private:
     int id;
-    vector<Edge*> edges;
+    vector<Node*> edges;
 public:
     Node(int id) : id(id) {};
     // Delete copy and copy-assignment constructors
     Node & operator=(const Node&) = delete;
     Node (const Node&) = delete;
 
-    void add_edge(Edge *e) {
+    void add_edge(Node *e) {
         edges.push_back(e);
     }
 };
@@ -74,7 +74,7 @@ void read_graph() {
             cout << "Creating node " << node_2_id << "\n";
         }
         // Link nodes
-        Edge *edge = new Edge(nodes_dict[node_2_id]);
+        Node *edge = new Node(nodes_dict[node_2_id]);
         nodes_dict[node_1_id] -> add_edge(edge);
 
         ++in_deg[node_2_id];
