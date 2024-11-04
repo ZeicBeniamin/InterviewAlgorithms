@@ -12,7 +12,7 @@
             "stopAtEntry": false,
             "environment": [],
             "program": "${workspaceFolder}/builds/${fileBasenameNoExtension}",
-            "cwd": "${workspaceFolder}",
+            "cwd": "${fileDirname}",
             "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
