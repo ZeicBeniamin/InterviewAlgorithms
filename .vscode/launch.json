@@ -27,13 +27,23 @@
                     "ignoreFailures": true
                 }
             ]
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "${fileDirname}",
+            "console": "integratedTerminal",
+            "justMyCode": true
         }
-        
     ],
     "compounds": [
         {
             "name": "CppBuildAndLaunch",
-            "configurations": ["(gdb) Launch"],
+            "configurations": [
+                "(gdb) Launch"
+            ],
             "preLaunchTask": "buildcpp",
         }
     ]
