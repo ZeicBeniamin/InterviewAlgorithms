@@ -37,6 +37,8 @@ class Node:
 nodes_dict = {}
 
 def dijkstra(start, nodes_num):
+    # Something somewhere (maybe in the priority queue) generates non-minimum
+    # results for the grader10 test from infoarena
     nodes_queue = queue.PriorityQueue()
 
     nodes_queue.put(nodes_dict[start])
